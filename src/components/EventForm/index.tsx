@@ -104,7 +104,7 @@ const Form: React.FC<FormProps> = ({
                 required
             />
             <FormControl fullWidth margin="normal" required>
-                <InputLabel id="event">Age</InputLabel>
+                <InputLabel id="event">Evento</InputLabel>
                 <Select
                     labelId="event"
                     data-testid="form-event"
