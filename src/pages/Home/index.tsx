@@ -36,7 +36,7 @@ const Home: React.FC = () => {
   const fetchEvents = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(`${API_BASE_URL}/events`);
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/events`);
       const { data } = await response.json();
       setEvents(data);
       setFilteredEvents(data);
