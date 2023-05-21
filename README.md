@@ -16,9 +16,9 @@ Antes de executar o projeto, certifique-se de ter os seguintes requisitos instal
 Após garantir que os requisitos acima estão atendidos, siga as etapas abaixo para executar o projeto:
 
 ```
-$ Clone esse repositório: git clone https://github.com/EduardoBezerraDev/event-test-front.git
+$ Clone esse repositório: git clone https://github.com/EduardoBezerraDev/my-event.git
 $ Entre na pasta (event-test-front) e realize o comando "yarn install"
-$ Execute o projeto com o comando "yarn install"
+$ Execute o projeto com o comando "yarn dev"
 ```
 
 ## Testes
@@ -31,4 +31,4 @@ $ execute "yarn test" para está executando os testes
 
 ### Back-End
 
-* O back-end para está rodando esse projeto se encontra em um outro repositório
+* O back-end para está rodando esse projeto se encontra nesse repositório: https://github.com/EduardoBezerraDev/my-event-back-end
