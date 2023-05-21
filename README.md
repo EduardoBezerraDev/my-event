@@ -1,6 +1,6 @@
 # Projeto: Evento
 
-o projeto tem como objetivo criar um sistema de eventos, no qual é possível cadastrar uma nova pessoa no evento, assim como também visualizar todos os eventos e respectivas pessoas inscritas.
+O projeto tem como objetivo criar um sistema de eventos, no qual é possível cadastrar uma nova pessoa no evento, assim como também visualizar todos os eventos e respectivas pessoas inscritas.
 
 
 ### Requisitos
