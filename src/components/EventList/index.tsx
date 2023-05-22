@@ -32,7 +32,6 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
 
   const fetchRegisteredEvents = async (isQuerySearch = false) => {
     try {
-      if (isQuerySearch && searchQuery === '') return
       if (selectedEvent) {
         const response = await fetch(
           `${API_BASE_URL}/registrations/filter?column=name&filter=${searchQuery}&eventId=${selectedEvent}&page=${currentPage}`
@@ -105,6 +104,13 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
   useEffect(() => {
     fetchRegisteredEvents();
   }, [selectedEvent, currentPage, usersPerPage]);
+
+  useEffect(() => {
+    if(searchQuery=='' && selectedEvent){
+      fetchRegisteredEvents();
+    }
+  }, [searchQuery])
+  
 
   return (
     <Box width="100%" maxWidth={700} margin="0 auto" padding={2} style = {{overflow:'auto', maxHeight: '54vh'}}>
