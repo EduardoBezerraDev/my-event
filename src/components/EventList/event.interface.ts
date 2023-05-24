@@ -11,5 +11,12 @@ interface EventListProps {
     events: any;
 }
 
-export type { EventListProps, Event };
+interface RegisteredUser {
+    name: string;
+    email: string;
+    cpf: string;
+  }
+  
+
+export type { EventListProps, Event, RegisteredUser };
  

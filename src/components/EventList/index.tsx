@@ -13,14 +13,9 @@ import {
 } from "@mui/material";
 import Pagination from "@mui/material/Pagination";
 import { API_BASE_URL } from "../../consts";
-import { EventListProps } from "./event.interface";
+import { EventListProps, RegisteredUser } from "./event.interface";
 import { Event } from "./event.interface";
 
-interface RegisteredUser {
-  name: string;
-  email: string;
-  cpf: string;
-}
 
 const EventList: React.FC<EventListProps> = ({ events }) => {
   const [selectedEvent, setSelectedEvent] = useState<number | null>(null);
@@ -30,7 +25,7 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
   const [totalUsers, setTotalUsers] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const fetchRegisteredEvents = async (isQuerySearch = false) => {
+  const fetchRegisteredEvents = async () => {
     try {
       if (selectedEvent) {
         const response = await fetch(
@@ -154,7 +149,7 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
               fullWidth
             />
             <Button
-              onClick={() => fetchRegisteredEvents(true)}
+              onClick={() => fetchRegisteredEvents()}
               variant="outlined"
               style={{ float: "right", marginTop: 10 }}
             >
